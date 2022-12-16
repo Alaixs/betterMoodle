@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "betterMoodle",
+    "description": "Moodle but better",
+    "version": "1",
+    "author": "Silens",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "48": "icon.png",
+        "64": "icon.png",
+        "96": "icon.png"
+    },
+    "host_permissions": [
+        "*://moodle.univ-lr.fr/2022/my/"
+    ],
+    "content_scripts": [{
+        "matches": ["*://moodle.univ-lr.fr/2022/my/"],
+        "js": ["script.js"],
+        "run_at": "document_start"
+    }]
+}
